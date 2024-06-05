@@ -1,2 +1,2 @@
 # Alonso-fetch-tp4
-Actividad: Consumiendo y Visualizando Datos de una API Pública
+Actividad: Consumiendo y Visualizando Datos de una API Pública aplicación web que consuma la API pública de rick y morty utilizando HTML, CSS y JavaScript (index.html, style.css y script.js).
