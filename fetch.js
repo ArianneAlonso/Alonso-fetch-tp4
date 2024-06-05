@@ -1,18 +1,16 @@
 const contenido = document.getElementById("contenido")
 const datosfetch = async () => {
     try{
-        const pagina = await fetch("https://rickandmortyapi.com/api/character")
-        const dato = await pagina.json()
-        const resultado = dato.results
+        const res = await fetch("https://rickandmortyapi.com/api/character")
+        const data = await res.json()
+        const pregunta = data.results
 
-        console.log(resultado)
-
-        resultado.forEach(pregunt => {
-            const personaje = document.createElement("div")
-            personaje.className = "foto"
-            personaje.innerHTML +=`
+        pregunta.forEach(pregunt => {
+            const item = document.createElement("div")
+            item.className = "foto"
+            item.innerHTML +=`
+           <img src="${pregunt.image}">
            <h3>${pregunt.name}</h3>
-           <img src="${pregunt.image}" >
            <p>${pregunt.gender}</p>
            `
            contenido.appendChild(item)
